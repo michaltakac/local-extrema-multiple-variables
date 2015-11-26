@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Math Project</title>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <meta name="author" content="Michal Takáč">
+
+  <!-- Twitter Bootstrap -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+
+  <!-- KaTeX styles -->
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+  <link rel="stylesheet" href="lib/mathbox.css">
+  <link rel="stylesheet" href="styles/combo.min.css">
+  <!--<script type="text/javascript" src="lib/combo.min.js"></script>-->
+  <script type="text/javascript" src="lib/katex.onload.js"></script>
+  <link rel="stylesheet" href="styles/style.css">
+
+  <script src="lib/mathbox-bundle.min.js"></script>
+  <script type="text/javascript" src="lib/attributes.js"></script>
+  <script src="lib/math.min.js"></script>
+</head>
+<body>
+  <div class="iframe c" id="visualization"></div>
+
+  <div id="native-frame">
+    <!-- Begin Content --> 
+    <div class="grid">
+
+      <article class="full">
+
+        <div class="wide slideshow full">
+
+          <nav>
+            <div class="prev">
+              <div class="reverse" id="previous">
+                <div class="arrow">
+                  <span class="icon-arrow"><span></span><span></span></span>
+                </div>
+              </div>
+              <div id="slide-number"></div>
+            </div>
+
+            <div class="next">
+              <div id="next">
+                <div class="arrow">
+                  <span class="icon-arrow"><span></span><span></span></span>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+          <div class="steps">
+
+            <div class="step step-1 active">
+              <div class="extra top active">
+                <big><big>
+                  Príklad 1
+                </big></big><br>
+                Nájdite lokálne extrémy funkcie <tex>f(x,y) = x^3 + 3xy^2 - 51x - 24y</tex>.
+              </div>
+              <p class="slide-item">Pre navigáciu medzi slajdami použite šípky.</p>
+            </div>
+
+            <div class="step step-2">
+              <div class="extra top center">
+                <tex>f(x, y) = x^3 + 3xy^2 - 51x - 24y</tex>
+              </div>
+
+              <p class="slide-item">Majme funkciu <tex>f(x, y) = x^3 + 3xy^2 - 51x - 24y</tex>. Pre nájdenie lokálneho extrému funkcie je postup nasledovný:
+                <ol class="slide-item">
+                  <li>Nájsť stacionárne body,</li>
+                  <li>otestovať stacionárne body na možný extrém,</li>
+                  <li>vyšetriť body, v ktorých neexistujú parciálne derivácie podľa všetkých premenných.</li>
+                </ol>
+              </p>
+            </div>
+
+            <div class="step step-3">
+              <div class="extra top">
+                <tex>f(x,y) = \color{#32BD00}{x^3} + 3\color{#32BD00}{x}y^2 - 51\color{#32BD00}{x} - 24y</tex>
+                <p>
+                <tex>\frac{\partial f(x,y)}{\partial \color{#32BD00}{x}} = 3\color{#32BD00}{x^2} + 3y^2 - 51 = 0</tex></p>
+              </div>
+              <p class="slide-item">Začnime parciálnou deriváciou <tex>\frac{\partial f(x,y)}{\partial x}</tex>. Z tohto strašideľne vyzerajúceho zápisu môžeme vyčítať, že chceme zderivovať našu funkciu <tex>f(x,y)</tex> podľa <tex>\color{#32BD00}{x}</tex>. To znamená, že všetky <tex>\color{#803906}{y}</tex> ako keby vo funkcii neexistovali (povieme o nich, že sú to konštanty)! Poďme si to radšej zafarbiť aby sme to lepšie videli.</p>
+
+              <p class="slide-item" style="text-align: center; color: #808080;"><tex>f(x,y) = \color{#32BD00}{x^3} + 3\color{#32BD00}{x}y^2 - \color{#32BD00}{51x} - 24y</tex></p>
+
+              <p class="slide-item">Derivujme teda podľa <tex>\color{#32BD00}{x}</tex>:</p>
+
+              <p class="slide-item" style="text-align: center;"><tex>f(x,y) = \color{#32BD00}{x^3} + \color{#32BD00}{3x}y^2 - \color{#32BD00}{51x} - 24y</tex><br>
+              <tex>\frac{\partial f(x,y)}{\partial \color{#32BD00}{x}} = \color{#32BD00}{3x^2} + \color{#32BD00}{3y^2} - \color{#32BD00}{51} = 0</tex></p>
+            </div>
+
+            <div class="step step-4">
+              <div class="extra top">
+                <tex>f(x,y) = x^3 + \color{#803906}{3}x\color{#803906}{y^2} - 51x - \color{#803906}{24y}</tex>
+                <p>
+                <tex>\frac{\partial f(x,y)}{\partial \color{#32BD00}{x}} = \color{#32BD00}{3x^2} + \color{#32BD00}{3y^2} - \color{#32BD00}{51} = 0</tex></p>
+                <p><tex>\frac{\partial f(x,y)}{\partial \color{#803906}{y}} = \color{#803906}{6xy} - \color{#803906}{24} = 0</tex></p>
+              </div>
+              <p class="slide-item">Teraz zderivujeme funkciu <tex>f(x,y)</tex> podľa <tex>\color{#803906}{y}</tex>:</p>
+
+              <p class="slide-item" style="text-align: center;"><tex>f(x,y) = x^3 + \color{#803906}{3}x\color{#803906}{y^2} - 51x - \color{#803906}{24y}</tex><br>
+              <tex>\frac{\partial f(x,y)}{\partial \color{#803906}{y}} = \color{#803906}{6xy} - \color{#803906}{24} = 0</tex></p>
+            </div>
+
+            <div class="step step-5">
+              <div class="extra top">
+                <tex>f(x,y) = x^3 + \color{#803906}{3}x\color{#803906}{y^2} - 51x - \color{#803906}{24y}</tex>
+                <p>
+                <tex>\frac{\partial f(x,y)}{\partial \color{#32BD00}{x}} = \color{#32BD00}{3x^2} + \color{#32BD00}{3y^2} - \color{#32BD00}{51} = 0</tex></p>
+                <p><tex>\frac{\partial f(x,y)}{\partial \color{#803906}{y}} = \color{#803906}{6xy} - \color{#803906}{24} = 0</tex></p>
+              </div>
+              <p class="slide-item">Derivácia funkcie podľa y</p>
+            </div>
+
+            <div class="step step-6">
+              <div class="extra top">
+                <tex>f(x,y) = x^3 + 3xy^} - 51x - 24y</tex>
+                <p>
+                <tex>\frac{\partial f(x,y)}{\partial x} = 3x^2 + 3y^2 - 51 = 0</tex></p>
+                <p><tex>\frac{\partial f(x,y)}{\partial y} = 6xy - 24 = 0</tex></p>
+                <p>Z druhej rovnice vyjadrime <tex>\color{#803906}{y = \frac{4}{x}}</tex></p>
+              </div>
+              <p class="slide-item">Potrebujeme vyjadriť jednu z premenných. Z druhej rovnice to bude ľahšie, takže ideme na to:</p>
+
+              <p class="slide-item">
+                <tex>6xy - 24 = 0</tex> &nbsp;&nbsp;&nbsp; / pripočítame 24<br>
+                <tex>6xy = 24</tex> &nbsp;&nbsp;&nbsp; / predelíme 6-timi<br>
+                <tex>xy = 4</tex> &nbsp;&nbsp;&nbsp; / vyjadríme.. napríklad <tex>y</tex><br>
+                <tex>\color{#803906}{y = \frac{4}{x}}</tex>
+              </p>
+
+              <p class="slide-item">
+                <tex>y</tex> máme, teraz vyjadríme <tex>x</tex> z prvej rovnice...
+              </p>
+            </div>
+
+            <div class="step step-7">
+              <div class="extra top center">
+                <tex>f(x,y) = x^3 + 3xy^} - 51x - 24y</tex>
+                <p>
+                <tex>\frac{\partial f(x,y)}{\partial x} = 3x^2 + 3y^2 - 51 = 0</tex></p>
+                <p><tex>\frac{\partial f(x,y)}{\partial y} = 6xy - 24 = 0</tex></p>
+                <p>Z druhej rovnice vyjadrime <tex>y = \frac{4}{x}</tex></p>
+                <p>Z prvej rovnice dostávame:</p>
+                <p><tex>x_1^2 = 16</tex></p>
+                <p><tex>x_2^2 = 1</tex></p>
+              </div>
+
+              <p class="slide-item">Vyjadrujeme <tex>x</tex> z prvej rovnice:</p>
+
+              <p class="slide-item">
+                <tex>3x^2 + 3y^2 - 51 = 0</tex> &nbsp;&nbsp;&nbsp; / predelíme 3-kou<br>
+                <tex>x^2 + y^2 - 17 = 0</tex> &nbsp;&nbsp;&nbsp; / za y dosadíme <tex>y = \frac{4}{x}</tex><br>
+                <tex>x^2 + (\color{#803906}{\frac{4}{x}})^2 - 17 = 0</tex> <br>
+                <tex>x^2 + \frac{16}{x^2} - 17 = 0</tex> &nbsp;&nbsp;&nbsp; / prenásobíme s <tex>x^2</tex> aby sme odstránili zlomky<br>
+                <tex>x^\color{#803906}{4} + 16 - 17x^2 = 0</tex> <br>
+                <tex>x^4 - 17x^2 + 16 = 0</tex> <br>
+              </p>
+
+              <p class="slide-item">
+                Rovnicu <tex>x^4 - 17x^2 + 16 = 0</tex> nevieme vyriešiť tak ľahko. Pomôžeme si substitúciou <tex>\color{#803906}{x^2} = \color{#D45800}{a}</tex>. Naša rovnica bude hneď vyzerať ľahšie a taktiež ju už budeme vedieť riešiť:
+              </p>
+
+              <p class="slide-item" style="text-align: center;">
+                <tex>a^2 - 17a + 16 = 0</tex><br>
+                Kvadratická rovnica! "Veď tú poznám!"<br>
+                <tex>a_1,a_2 = \frac{b \pm \sqrt{D}}{2a}</tex><br>
+                <tex>a_1,a_2 = \frac{b \pm \sqrt{(b^2 - 4ac)}}{2a}</tex><br>
+                <tex>a_1,a_2 = \frac{17 \pm \sqrt{(17^2 - 4*1*16)}}{2*1}</tex><br>
+                <tex>a_1,a_2 = \frac{17 \pm \sqrt{225}}{2}</tex><br>
+                <tex>a_1 = 16</tex><br>
+                <tex>a_2 = 1</tex><br>
+              </p>
+
+              <p class="slide-item">
+                Nesmieme zabudnúť vrátiť späť do rovnice výraz, ktorý sme substituovali. Dostávame teda:
+              </p>
+
+              <p class="slide-item" style="text-align: center;">
+                <tex>x_1^2 = 16</tex><br>
+                <tex>x_2^2 = 1</tex><br><br>
+
+                <tex>x_1 = \sqrt{x_1^2}</tex><br>
+                <tex>x_2 = \sqrt{x_2^2}</tex><br><br>
+
+                <tex>x_1 = \sqrt{16}</tex><br>
+                <tex>x_2 = \sqrt{1}</tex><br><br>
+
+                <tex>x_1 = \pm 4</tex><br>
+                <tex>x_2 = \pm 1</tex><br><br>
+              </p>
+            </div>
+
+            <div class="step step-8">
+              <div class="extra top center">
+                <tex>f(x,y) = x^3 + 3xy^} - 51x - 24y</tex>
+                <p>
+                <tex>\frac{\partial f(x,y)}{\partial x} = 3x^2 + 3y^2 - 51 = 0</tex></p>
+                <p><tex>\frac{\partial f(x,y)}{\partial y} = 6xy - 24 = 0</tex></p>
+                <p>Z druhej rovnice vyjadrime <tex>y = \frac{4}{x}</tex></p>
+                <p>Z prvej rovnice dostávame:</p>
+                <p><tex>x_1 = 4</tex></p>
+                <p><tex>x_2 = -4</tex></p>
+                <p><tex>x_3 = 1</tex></p>
+                <p><tex>x_4 = -1</tex></p>
+              </div>
+
+              <p class="slide-item"><tex>x_1</tex> a <tex>x_2</tex> obe nadobúdajú kladné aj záporné hodnoty. To znamená, že máme do činenia so štyrma <tex>x</tex>-ovými súradnicami! Štyri <tex>x</tex>-ové súradnice = štyri body! Poďme si tieto súradnice krajšie označiť a priradiť k ním aj príslušné hodnoty:</p>
+
+              <p class="slide-item" style="text-align: center;">
+                <tex>x_1 = 4</tex><br>
+                <tex>x_2 = -4</tex><br>
+                <tex>x_3 = 1</tex><br>
+                <tex>x_4 = -1</tex><br>
+              </p>
+            </div>
+
+            <div class="step step-9">
+              <div class="extra top right">
+                <tex>y = \frac{4}{x}</tex><br>
+                <tex>x</tex>-ové súradnice:<br>
+                <tex>x_1 = 4</tex><br>
+                <tex>x_2 = -4</tex><br>
+                <tex>x_3 = 1</tex><br>
+                <tex>x_4 = -1</tex><br>
+                <tex>y</tex>-ové súradnice:<br>
+                <tex>y_1 = 1</tex><br>
+                <tex>y_2 = -1</tex><br>
+                <tex>y_3 = 4</tex><br>
+                <tex>y_4 = -4</tex>
+              </div>
+
+              <p class="slide-item">Máme 4 <tex>x</tex>-ové súradnice, čiže vieme, že máme do činenia so štyrma stacionárnymi bodmi, potrebujeme k ním ešte nájsť <tex>y</tex>-ové súradnice (Stačí len dosadiť do vzorca <tex>y = \frac{4}{x}</tex>).</p>
+
+              <p class="slide-item" style="text-align: center;">
+                <tex>y_1 = \frac{4}{x_1} = \frac{4}{4} = 1</tex><br>
+                <tex>y_2 = \frac{4}{x_2} = \frac{4}{-4} = -1</tex><br>
+                <tex>y_3 = \frac{4}{x_3} = \frac{4}{1} = 4</tex><br>
+                <tex>y_4 = \frac{4}{x_4} = \frac{4}{-1} = -4</tex><br>
+              </p>
+            </div>
+
+            <div class="step step-10">
+              <div class="extra top right">
+                <tex>A = [\color{#32BD00}{x_1} , \color{#803906}{y_1}]</tex><br>
+                <tex>B = [\color{#32BD00}{x_2} , \color{#803906}{y_2}]</tex><br>
+                <tex>C = [\color{#32BD00}{x_3} , \color{#803906}{y_3}]</tex><br>
+                <tex>D = [\color{#32BD00}{x_4} , \color{#803906}{y_4}]</tex><br>
+              </div>
+
+              <p class="slide-item">Poďme usporiadať súradnice - priradiť ich k jednotlivým bodom:</p>
+
+              <p class="slide-item" style="text-align: center;">
+                <tex>A = [\color{#32BD00}{x_1} , \color{#803906}{y_1}]</tex><br>
+                <tex>B = [\color{#32BD00}{x_2} , \color{#803906}{y_2}]</tex><br>
+                <tex>C = [\color{#32BD00}{x_3} , \color{#803906}{y_3}]</tex><br>
+                <tex>D = [\color{#32BD00}{x_4} , \color{#803906}{y_4}]</tex><br>
+              </p>
+            </div>
+
+            <div class="step step-11">
+              <div class="extra top right">
+                <tex>A = [\color{#32BD00}{4} , \color{#803906}{1}]</tex><br>
+                <tex>B = [\color{#32BD00}{-4} , \color{#803906}{-1}]</tex><br>
+                <tex>C = [\color{#32BD00}{1} , \color{#803906}{4}]</tex><br>
+                <tex>D = [\color{#32BD00}{-1} , \color{#803906}{-4}]</tex><br>
+              </div>
+
+              <p class="slide-item">Po dosadení vypočítaných hodnôt:</p>
+
+              <p class="slide-item" style="text-align: center;">
+                <tex>A = [\color{#32BD00}{4} , \color{#803906}{1}]</tex><br>
+                <tex>B = [\color{#32BD00}{-4} , \color{#803906}{-1}]</tex><br>
+                <tex>C = [\color{#32BD00}{1} , \color{#803906}{4}]</tex><br>
+                <tex>D = [\color{#32BD00}{-1} , \color{#803906}{-4}]</tex><br>
+              </p>
+            </div>
+
+            <div class="step step-12">
+              <div class="extra top right">
+                <tex>A = [\color{#32BD00}{4} , \color{#803906}{1}]</tex><br>
+                <tex>B = [\color{#32BD00}{-4} , \color{#803906}{-1}]</tex><br>
+                <tex>C = [\color{#32BD00}{1} , \color{#803906}{4}]</tex><br>
+                <tex>D = [\color{#32BD00}{-1} , \color{#803906}{-4}]</tex><br>
+                <big>Stacionárne body nájdené!</big>
+              </div>
+
+              <p class="slide-item">Máme stacionárne body! No ešte sme nevyhrali... musíme ich otestovať, či sa v nich nachádza lokálny extrém, a ak áno, či ide o <strong>lokálne minimum</strong> alebo <strong>lokálne maximum</strong>.</p>
+            </div>
+
+            <div class="step step-13">
+              <div class="extra top right">
+                <tex>A = [\color{#32BD00}{4} , \color{#803906}{1}]</tex><br>
+                <tex>B = [\color{#32BD00}{-4} , \color{#803906}{-1}]</tex><br>
+                <tex>C = [\color{#32BD00}{1} , \color{#803906}{4}]</tex><br>
+                <tex>D = [\color{#32BD00}{-1} , \color{#803906}{-4}]</tex><br>
+                <big>Stacionárne body nájdené!</big><br>
+                ...už len zistit, či sú "extrémisti" alebo nie.
+              </div>
+
+              <p class="slide-item">Máme stacionárne body! No ešte sme nevyhrali... musíme ich otestovať, či sa v nich nachádza <strong>lokálny extrém</strong>, a ak áno, či ide o <strong>lokálne minimum</strong> alebo <strong>lokálne maximum</strong>. Začnime bodom A...</p>
+            </div>
+
+            <div class="step step-14">
+              <div class="extra top">
+                <p>Determinant parciálnych derivácií druhého rádu v bode A:</p>
+                <tex>D=
+                \begin{bmatrix} \frac{\partial^2 f(A)}{\partial x^2} & \frac{\partial^2 f(A)}{\partial xy} \\ \frac{\partial^2 f(A)}{\partial xy} & \frac{\partial^2 f(A)}{\partial y^2} 
+                \end{bmatrix} 
+                > 0</tex><br>
+                <big>Ak platí, potom v bode A má funkcia <tex>f(x,y)</tex> lokálny extrém.</big>
+              </div>
+
+              <p class="slide-item">Aby sme zistili, či sa v našich stacionárnych bodoch nachádzajú <strong>lokálne extrémy</strong>, potrebujeme pre každý stacionárny bod vypočítať <strong>determinant parciálnych derivácií druhého rádu</strong>.</p>
+            </div>
+            
+          </div>
+          
+        </div>
+
+        <div class="c"></div>
+
+      </article>
+
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

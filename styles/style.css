@@ -1,0 +1,28 @@
+#slide-number {
+	margin-left: 75px;
+}
+
+.slideshow .steps > .step p {
+	margin-top: 10px;
+}
+.slideshow .steps > .step .slide-item {
+	opacity: 0;
+}
+
+.slideshow .steps > .step.active .slide-item, 
+.slideshow .steps > .step.active .extra {
+	opacity: 1;
+}
+
+.slideshow .steps > .step.active .extra.center {
+	text-align: center;
+}
+.slideshow .steps > .step.active .extra.top {
+	top: -600px;
+}
+.slideshow .steps > .step.active .extra.top.right {
+	right: 0;
+}
+.slideshow .steps > .step.active .extra.top.left {
+	left: 0;
+}
