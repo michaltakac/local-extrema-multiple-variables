@@ -1,16 +1,3 @@
-	/*var power = 2;
-	var f1 = 'f(x) = x^{'+power+'}+y^{'+power+'}';
-	var f2;
-	katex.render(f1, document.getElementById('step-1-eq-1'));
-
-	for (var i = 2; i < 10; i++) {
-		setTimeout(function() {
-			f2 = 'f(x) = x^{'+i+'}+y^\\color{#f44}{'+i+'}';
-			katex.render(f2, document.getElementById('step-1-eq-1'));
-			i++;
-		}, 1000);
-	}*/
-
 /*
  * There are more options for how we can deal with working with
  * equations. Equation1 is explicitly written, then evaluated by Math.js,
@@ -138,7 +125,7 @@ var scene = present.slide();
 // Slide counter element
 var slideNumber = document.getElementById('slide-number');
 // Inject initial value into slide counter element
-slideNumber.innerHTML = present.get('index') + '/22';
+slideNumber.innerHTML = present.get('index') + '/23';
 
 // Navigate through slides with left and right arrow on keyboard
 if (window == top) {
@@ -163,6 +150,7 @@ $('#next').on('click', function() {
   var slide = present.get('index');
   $('.step-'+slide).removeClass('active');
   $('.step-'+slide).children('.extra').removeClass('active');
+  $('#disqus_thread').removeClass('active');
   if (slide < 23) {
     slide += 1;
     $('.step-'+slide).addClass('active');
@@ -170,17 +158,24 @@ $('#next').on('click', function() {
     present.set('index', slide);
     slideNumber.innerHTML = slide + '/23';
   }
+  if (slide === 23) {
+    $('#disqus_thread').addClass('active');
+  }
 });
 $('#previous').on('click', function() {
   var slide = present.get('index');
   $('.step-'+slide).removeClass('active');
   $('.step-'+slide).children('.extra').removeClass('active');
+  $('#disqus_thread').removeClass('active');
   if (slide > 0) {
     slide -= 1;
     $('.step-'+slide).addClass('active');
     $('.step-'+slide).children('.extra').addClass('active');
     present.set('index', slide);
     slideNumber.innerHTML = slide + '/23';
+  }
+  if (slide === 23) {
+    $('#disqus_thread').addClass('active');
   }
 });
 
@@ -833,198 +828,3 @@ scene
       {props: {opacity: 1}},
     ]
   })
-
-scene
-  .reveal({
-    duration: 1
-  })
-
-
-
-
-  .slide() // 2.
-    .reveal({
-      duration: 1
-    })
-    .end()
-  .slide() // 3.
-    .reveal({
-      duration: 1
-    })
-    .area({
-        width: 100,
-        height: 100,
-        axes: [1, 3],
-        live: false,
-        rangeX: [-5, 5],
-        rangeY: [-5, 5],
-        expr: function (emit, x, y, i, j) {
-          var func = 3*Math.pow(x, 2) + 3*Math.pow(y, 2) - 51;
-          emit(x, func, y);
-        },
-        channels: 3,
-      }).surface({
-        color: 0x1AAD00,
-        width: 2,
-        opacity: 1,
-        lineX: false,
-        lineY: false
-      })
-
-present
-  .slide() // 4.
-    .reveal({
-      duration: 1
-    })
-    .area({
-      width: 100,
-      height: 100,
-      axes: [1, 3],
-      rangeX: [-5, 5],
-      rangeY: [-5, 5],
-      expr: function (emit, x, y, i, j) {
-        var func = 3*Math.pow(x, 2) + 3*Math.pow(y, 2) - 51;
-        emit(x, func, y);
-      },
-      channels: 3,
-    })
-    .surface({
-      color: 0x1AAD00,
-      width: 1,
-      opacity: 1,
-      lineX: true,
-      lineY: true
-    })
-    .play({
-      target: 'cartesian',
-      pace: 5,
-      to: 2,
-      loop: true,
-      script: [
-        {props: {range: [[-5, 5], [-800, 800], [-5, 5]]}},
-        {props: {range: [[-5, 5], [-1, 1], [-5, 5]]}},
-      ]
-    })
-
-present
-  .slide() // 4.
-    .reveal({
-      duration: 1
-    })
-    .area({
-      width: 100,
-      height: 100,
-      axes: [1, 3],
-      live: false,
-      rangeX: [-5, 5],
-      rangeY: [-5, 5],
-      expr: function (emit, x, y, i, j) {
-          var func = (6*x*y) - 24;
-          emit(x, func, y);
-        },
-      channels: 3,
-    }).surface({
-      color: 0xA16300, //xA16300
-      width: 2,
-      opacity: 1,
-      lineX: false,
-      lineY: false
-    })
-
-
-present
-  .slide() // 5.
-    .reveal({
-      duration: 1
-    })
-
-present
-  .slide() // 6.
-    .reveal({
-      duration: 1
-    })
-
-present
-  .slide() // 7.
-    .reveal({
-      duration: 1
-    })
-
-present
-  .slide() // 8.
-    .reveal({
-      duration: 1
-    })
-    // Draw ticks and labels
-    .scale({
-      axis: 1,
-      divide: 10,
-    }).ticks({
-      width: 5,
-      size: 25,
-      color: 'black',
-    }).format({
-      digits: 1,
-    }).label({
-      color: 'red',
-      zIndex: 1,
-    })
-    .scale({
-      axis: 3,
-      divide: 10,
-    }).ticks({
-      width: 5,
-      size: 25,
-      color: 'black',
-    }).format({
-      digits: 1,
-    }).label({
-      color: 'red',
-      zIndex: 1,
-    })
-    .end()
-  .slide()
-    .reveal({
-      duration: 1
-    })
-    .end()
-  .slide()
-    .reveal({
-      duration: 1
-    })
-    .array({
-      data: [[4,0,1], [-4,0,-1], [1,0,4], [-1,0,-4]],
-      channels: 3, // necessary
-      live: false
-    })
-    .point({
-      size: 35,
-      color: 0xFAE900
-    })
-    .array({
-      data: [[4,100,1], [-4,-80,-1], [1,100,4], [-1,-50,-4]],
-      channels: 3, // necessary
-      live: false,
-    }).text({
-      data: ["A", "B", "C", "D"],
-      weight: 'bold',
-      detail: 45
-    }).label({
-      color: 0xDB00BA,
-    })
-    .end()
-  .slide() // 9.
-    .reveal({
-      duration: 1
-    })
-    .end()
-  .slide() // 9.
-    .reveal({
-      duration: 1
-    })
-    .end()
-  .slide() // 9.
-    .reveal({
-      duration: 1
-    })
-    .end()

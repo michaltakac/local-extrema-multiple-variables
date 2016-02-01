@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Math Project</title>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <meta name="author" content="Michal Takáč">
+
+  <!-- Twitter Bootstrap -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+  <!-- KaTeX styles -->
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+  <link rel="stylesheet" href="lib/mathbox.css">
+  <link rel="stylesheet" href="styles/combo.min.css">
+  <!--<script type="text/javascript" src="lib/combo.min.js"></script>-->
+  <link rel="stylesheet" href="styles/style.css">
+
+  <script src="lib/mathbox-bundle.min.js"></script>
+  <script type="text/javascript" src="lib/attributes.js"></script>
+  <script src="lib/math.min.js"></script>
+</head>
+<body>
+  <div class="iframe c" id="visualization"></div>
+
+  <div id="native-frame">
+    <!-- Begin Content --> 
+    <div class="grid">
+
+      <article class="full">
+
+        <div class="wide slideshow full">
+
+          <nav>
+            <div class="prev">
+              <div class="reverse" id="previous">
+                <div class="arrow">
+                  <span class="icon-arrow"><span></span><span></span></span>
+                </div>
+              </div>
+              <div id="slide-number"></div>
+            </div>
+
+            <div class="next">
+              <div id="next">
+                <div class="arrow">
+                  <span class="icon-arrow"><span></span><span></span></span>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+          <div class="steps">
+
+            <div class="step step-1 active">
+              <div class="extra top active">
+                $$f(x,y) = x^2 + y^2$$
+              </div>
+            </div>
+
+            <div class="step step-2">
+            </div>
+
+            <div class="step step-3">
+            </div>
+
+            <div class="step step-4">
+              
+            </div>
+            
+          </div>
+          
+        </div>
+
+        <div class="c"></div>
+
+      </article>
+
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+  <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+  </script>
+  <script type="text/javascript" src="pr1.js"></script>
+</body>
+</html>

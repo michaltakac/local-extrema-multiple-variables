@@ -1,3 +1,10 @@
+#disqus_thread {
+	display: none;
+}
+#disqus_thread.active {
+	display: block;
+}
+
 #slide-number {
 	margin-left: 75px;
 }

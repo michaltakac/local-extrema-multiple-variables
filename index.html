@@ -63,15 +63,11 @@
 
               <p class="slide-item">
                 Q: Čo znamená $f(x, y)$?<br>
-                A: "Funkčná hodnota x y", ináč povedané, Z-ková súradnica
+                A: "Funkčná hodnota x y", ináč povedané, z-ková súradnica
               </p>
             </div>
 
             <div class="step step-2">
-              <div class="extra top">
-                $$f(x,y) = x^3 + 3xy^2 - 51x - 24y$$
-              </div>
-
               <p class="slide-item">
                 Q: Čo z toho vyplýva?<br>
                 A: Je to priestorový útvar
@@ -83,12 +79,8 @@
             </div>
 
             <div class="step step-3">
-              <div class="extra top">
-                $$f(x,y) = x^3 + 3xy^2 - 51x - 24y$$
-              </div>
-
               <p class="slide-item">
-                Z množstva bodov, ktoré vidíte na 3D modeli, všetky patria našej funkcii. Chceme zisťiť, v ktorých bodoch má funkcia lokálne extrémy (lokálne minimum, lokálne maximum).
+                Z množstva bodov, ktoré vidíte na 3D modeli, všetky patria našej funkcii. Chceme zistiť, v ktorých bodoch má funkcia lokálne extrémy (lokálne minimum, lokálne maximum).
               </p>
               <p class="slide-item">
                 Pri tejto funkcii je ťažšie nájsť extrém "len tak od oka", keďže pri pohľade na ňu nevieme s určitosťou povedať, kde sa lokálne minimum alebo lokálne maximum nachádza
@@ -96,16 +88,12 @@
             </div>
 
             <div class="step step-4">
-              <div class="extra top">
-                $$f(x,y) = \color{#32BD00}{x^3} + 3\color{#32BD00}{x}y^2 - 51\color{#32BD00}{x} - 24y$$
-                $$\frac{\partial f(x,y)}{\partial \color{#32BD00}{x}} = 3\color{#32BD00}{x^2} + 3y^2 - 51$$
-              </div>
               <p class="slide-item">
-                Začnime parciálnou deriváciou $\frac{\partial f(x,y)}{\partial x}$. Z tohto strašideľne vyzerajúceho zápisu môžeme vyčítať, že chceme zderivovať našu funkciu $f(x,y)$ podľa $\color{#32BD00}{x}$. To znamená, že všetky $\color{#FF5C5C}{y}$ ako keby vo funkcii neexistovali (povieme o nich, že sú to konštanty)! Poďme si to radšej zafarbiť aby sme to lepšie videli.
+                Začnime parciálnou deriváciou $\frac{\partial f(x,y)}{\partial x}$. Z tohto strašideľne vyzerajúceho zápisu môžeme vyčítať, že chceme zderivovať našu funkciu $f(x,y)$ podľa $\color{#32BD00}{x}$. To znamená, že na všetky $\color{#FF5C5C}{y}$ sa pozeráme ako na konštanty! Poďme si to radšej vyfarbiť aby sme to lepšie videli.
               </p>
 
               <p class="slide-item" style="text-align: center; color: #808080;">
-                $$f(x,y) = \color{#32BD00}{x^3} + 3\color{#32BD00}{x}y^2 - \color{#32BD00}{51x} - 24y$$
+                $$f(x,y) = \color{#32BD00}{x^3} + 3\color{#32BD00}{x}y^2 - 51\color{#32BD00}{x} - 24y$$
               </p>
 
               <p class="slide-item">Derivujme teda podľa $\color{#32BD00}{x}$:</p>
@@ -117,20 +105,15 @@
             </div>
 
             <div class="step step-5">
-              <div class="extra top">
-                $$f(x,y) = x^3 + 3xy^2 - 51x - 24y$$
-                $$\frac{\partial f(x,y)}{\partial x} = 3x^2 + 3y^2 - 51 = \color{#32BD00}{0}$$
-              </div>
               <p class="slide-item">
                 Potrebujeme zistiť priesečník tejto parciálnej derivácie s rovinou $xy$. Aby sme to zistili, parciálna derivácia sa bude rovnať 0 (v podstate za z-kovú súradnicu dosadíme 0).
+              </p>
+              <p class="slide-item" style="text-align: center;">
+                $$\frac{\partial f(x,y)}{\partial x} = 3x^2 + 3y^2 - 51 = \color{#32BD00}{0}$$
               </p>
             </div>
 
             <div class="step step-6">
-              <div class="extra top">
-                $$f(x,y) = x^3 + 3x\color{#FF5C5C}{y^2} - 51x - 24\color{#FF5C5C}{y}$$
-                $$\frac{\partial f(x,y)}{\partial \color{#FF5C5C}{y}} = 3x * \color{#FF5C5C}{2y} - 24 = 6x\color{#FF5C5C}{y} - 24$$
-              </div>
               <p class="slide-item">Teraz zderivujeme funkciu $f(x,y)$ podľa $\color{#FF5C5C}{y}$:</p>
 
               <p class="slide-item" style="text-align: center;">
@@ -140,17 +123,19 @@
             </div>
 
             <div class="step step-7">
-              <div class="extra top">
-                $$f(x,y) = x^3 + 3xy^2 - 51x - 24y$$
-                $$\frac{\partial f(x,y)}{\partial y} = 6xy - 24 = \color{#FF5C5C}{0}$$
-              </div>
               <p class="slide-item">
                 Opäť potrebujeme zistiť priesečník tejto parciálnej derivácie s rovinou $xy$. Aby sme to zistili, parciálna derivácia sa bude rovnať 0 (v podstate za z-kovú súradnicu dosadíme 0).
+              </p>
+              <p class="slide-item" style="text-align: center;">
+                $$\frac{\partial f(x,y)}{\partial y} = 6xy - 24 = \color{#FF5C5C}{0}$$
               </p>
             </div>
 
             <div class="step step-8">
-              <div class="extra top">
+              <p class="slide-item">
+                Všimnite si priesečník týchto útvarov.
+              </p>
+              <p class="slide-item" style="text-align: center;">
                 $$
                 \begin{equation}
                 \begin{aligned}
@@ -159,17 +144,10 @@
                 \end{aligned}
                 \end{equation}
                 $$
-              </div>
-              <p class="slide-item">
-                Všimnite si priesečník týchto útvarov.
               </p>
             </div>
 
             <div class="step step-9">
-              <div class="extra top">
-                <p>Z rovnice $6xy - 24 = 0$ dostávame:</p>
-                <p>$\color{#FF5C5C}{y = \frac{4}{x}}$</p>
-              </div>
               <p class="slide-item">Potrebujeme vyjadriť jednu z premenných. Z druhej rovnice to bude ľahšie, takže ideme na to:</p>
 
               <p class="slide-item">
@@ -187,17 +165,11 @@
               </p>
 
               <p class="slide-item">
-                $\color{#FF5C5C}{y}$ máme, teraz vyjadríme $\color{#32BD00}{x}$ z prvej rovnice...
+                $\color{#FF5C5C}{y}$ máme, teraz vyjadríme $\color{#32BD00}{x}$ z prvej rovnice.
               </p>
             </div>
 
             <div class="step step-10">
-              <div class="extra top center">
-                <p>Z rovnice $3x^2 + 3y^2 - 51 = 0$ dostávame:</p>
-                $$x_1^2 = 16$$
-                $$x_2^2 = 1$$
-              </div>
-
               <p class="slide-item">Vyjadrujeme $x$ z prvej rovnice:</p>
 
               <p class="slide-item">
@@ -259,20 +231,6 @@
             </div>
 
             <div class="step step-11">
-              <div class="extra top center">
-                <p>Z prvej rovnice dostávame:</p>
-                $$
-                \begin{equation}
-                \begin{aligned}
-                x_1 &= 4 \\
-                x_2 &= -4  \\
-                x_3 &= 1  \\
-                x_4 &= -1  \\
-                \end{aligned}
-                \end{equation}
-                $$
-              </div>
-
               <p class="slide-item">$x_1$ a $x_2$ obe nadobúdajú kladné aj záporné hodnoty. To znamená, že máme do činenia so štyrma $x$-ovými súradnicami! Štyri $x$-ové súradnice = štyri body! Poďme si tieto súradnice krajšie označiť a priradiť k ním aj príslušné hodnoty:</p>
 
               <p class="slide-item" style="text-align: center;">
@@ -290,21 +248,7 @@
             </div>
 
             <div class="step step-12">
-              <div class="extra top right">
-                $y = \frac{4}{x}$<br><br>
-                $x$-ové súradnice:<br>
-                $x_1 = 4$<br>
-                $x_2 = -4$<br>
-                $x_3 = 1$<br>
-                $x_4 = -1$<br><br>
-                $y$-ové súradnice:<br>
-                $y_1 = 1$<br>
-                $y_2 = -1$<br>
-                $y_3 = 4$<br>
-                $y_4 = -4$
-              </div>
-
-              <p class="slide-item">Máme 4 $x$-ové súradnice, čiže vieme, že máme do činenia so štyrma stacionárnymi bodmi, potrebujeme k ním ešte nájsť $y$-ové súradnice (Stačí len dosadiť do vzorca $y = \frac{4}{x}$).</p>
+              <p class="slide-item">Máme súradnice štyroch stacionárnych bodov, potrebujeme k ním ešte nájsť $y$-ové súradnice (Stačí len dosadiť do vzorca $y = \frac{4}{x}$).</p>
 
               <p class="slide-item" style="text-align: center;">
               $$
@@ -321,13 +265,6 @@
             </div>
 
             <div class="step step-13">
-              <div class="extra top right">
-                $A = [\color{#32BD00}{x_1} , \color{#FF5C5C}{y_1}]$<br>
-                $B = [\color{#32BD00}{x_2} , \color{#FF5C5C}{y_2}]$<br>
-                $C = [\color{#32BD00}{x_3} , \color{#FF5C5C}{y_3}]$<br>
-                $D = [\color{#32BD00}{x_4} , \color{#FF5C5C}{y_4}]$<br>
-              </div>
-
               <p class="slide-item">Poďme usporiadať súradnice - priradiť ich k jednotlivým bodom:</p>
 
               <p class="slide-item" style="text-align: center;">
@@ -339,19 +276,6 @@
             </div>
 
             <div class="step step-14">
-              <div class="extra top right">
-                $$
-                \begin{equation}
-                \begin{aligned}
-                A &= [\color{#32BD00}{4} , \color{#FF5C5C}{1}] \\
-                B &= [\color{#32BD00}{-4} , \color{#FF5C5C}{-1}] \\
-                C &= [\color{#32BD00}{1} , \color{#FF5C5C}{4}] \\
-                D &= [\color{#32BD00}{-1} , \color{#FF5C5C}{-4}]
-                \end{aligned}
-                \end{equation}
-                $$
-              </div>
-
               <p class="slide-item">Po dosadení vypočítaných hodnôt:</p>
 
               <p class="slide-item" style="text-align: center;">
@@ -369,22 +293,7 @@
             </div>
 
             <div class="step step-15">
-              <div class="extra top right">
-                $$
-                \begin{equation}
-                \begin{aligned}
-                A &= [\color{#32BD00}{4} , \color{#FF5C5C}{1}] \\
-                B &= [\color{#32BD00}{-4} , \color{#FF5C5C}{-1}] \\
-                C &= [\color{#32BD00}{1} , \color{#FF5C5C}{4}] \\
-                D &= [\color{#32BD00}{-1} , \color{#FF5C5C}{-4}]
-                \end{aligned}
-                \end{equation}
-                $$
-                <big>Stacionárne body nájdené!</big><br>
-                ...už len zistit, či ich funkčné hodnoty (teda body patriace funkcii $f(x, y)$) sú "extrémisti" alebo nie.
-              </div>
-
-              <p class="slide-item">Máme stacionárne body! No ešte sme nevyhrali... musíme ich otestovať, či sa v nich nachádza <strong>lokálny extrém</strong>, a ak áno, či ide o <strong>lokálne minimum</strong> alebo <strong>lokálne maximum</strong>. Začnime bodom A...</p>
+              <p class="slide-item">Máme stacionárne body! No ešte sme nevyhrali. Musíme ich otestovať, či sa v nich nachádza <strong>lokálny extrém</strong>, a ak áno, či ide o <strong>lokálne minimum</strong> alebo <strong>lokálne maximum</strong>.</p>
             </div>
 
             <div class="step step-16">
@@ -394,36 +303,21 @@
             </div>
 
             <div class="step step-17">
-              <div class="extra top">
-                <p>Determinant parciálnych derivácií druhého rádu v bode A:</p>
+              <p class="slide-item">Aby sme zistili, či sa v našich stacionárnych bodoch nachádzajú <strong>lokálne extrémy</strong>, potrebujeme pre každý stacionárny bod vypočítať <strong>determinant parciálnych derivácií druhého rádu</strong>.</p>
+
+              <p class="slide-item" style="text-align: center;">
+                Determinant parciálnych derivácií druhého rádu v bode A:
                 $$
                 \begin{equation}
                 D = \begin{bmatrix} \frac{\partial^2 f(A)}{\partial x^2} & \frac{\partial^2 f(A)}{\partial xy} \\ \frac{\partial^2 f(A)}{\partial yx} & \frac{\partial^2 f(A)}{\partial y^2} 
                 \end{bmatrix} > 0
                 \end{equation}
                 $$
-                <big>Ak platí, potom v bode A má funkcia $f(x,y)$ lokálny extrém.</big>
-              </div>
-
-              <p class="slide-item">Aby sme zistili, či sa v našich stacionárnych bodoch nachádzajú <strong>lokálne extrémy</strong>, potrebujeme pre každý stacionárny bod vypočítať <strong>determinant parciálnych derivácií druhého rádu</strong>.</p>
+                Ak platí, tak v bode A má funkcia $f(x,y)$ lokálny extrém.
+              </p>
             </div>
 
             <div class="step step-18">
-              <div class="extra top">
-                <p>Determinant parciálnych derivácií druhého rádu:</p>
-                $$
-                \begin{equation}
-                D = \begin{bmatrix} \frac{\partial^2 f(x, y)}{\partial x^2} & \frac{\partial^2 f(x, y)}{\partial xy} \\ \frac{\partial^2 f(x, y)}{\partial yx} & \frac{\partial^2 f(x, y)}{\partial y^2} 
-                \end{bmatrix} > 0
-                \end{equation}
-                $$
-                <big>Ak platí, potom v bode A má funkcia $f(x,y)$ lokálny extrém.</big>
-              </div>
-
-              <p class="slide-item">
-                Aby sme zistili, či sa v našich stacionárnych bodoch nachádzajú <strong>lokálne extrémy</strong>, potrebujeme najprv vypočítať <strong>parciálne derivácie $f(x, y)$ druhého rádu</strong>.
-              </p>
-
               <p class="slide-item">
                 Postup sa len zdá byť ťažký, no v podstate robíme len to, že <strong>zderivujeme funkcie druhý krát!</strong>.
               </p>
@@ -468,7 +362,7 @@
               </p>
 
               <p class="slide-item">
-                Áno, tak ľahké to jé. Poďme si na ukážku urobiť ešte jednu parciálnu deriváciu druhého rádu, napríklad $\frac{\partial^2 f(x, y)}{\partial yx}$.
+                Áno, je to ľahké. Poďme si na ukážku urobiť ešte jednu parciálnu deriváciu druhého rádu, napríklad $\frac{\partial^2 f(x, y)}{\partial yx}$.
               </p>
 
               <p class="slide-item">
@@ -500,16 +394,6 @@
             </div>
 
             <div class="step step-19">
-              <div class="extra top">
-                <p>Determinant parciálnych derivácií druhého rádu:</p>
-                $$
-                \begin{equation}
-                D = \begin{bmatrix} 6x & 6y \\ 6y & 6x 
-                \end{bmatrix}
-                \end{equation}
-                $$
-              </div>
-
               <p class="slide-item">
                 Postupne takto vypočítame všetky parciálne derivácie druhého rádu:
               </p>
@@ -541,7 +425,7 @@
               </p>
 
               <p class="slide-item">
-                Dosaďme naše vypočítené hodnoty:
+                Dosaďme naše vypočítané hodnoty:
               </p>
 
               <p class="slide-item" style="text-align: center;">
@@ -556,19 +440,6 @@
             </div>
 
             <div class="step step-20">
-              <div class="extra top">
-                <p>Determinant parciálnych derivácií druhého rádu pre bod A:</p>
-                $$
-                \begin{equation}
-                D_A = \begin{bmatrix} 24 & 6 \\ 6 & 24 
-                \end{bmatrix} = 576 - 36 = 540 > 0
-                \end{equation}
-                $$
-                <p>Bod A teda má lokálny extrém!</p>
-                $$24 > 0$$
-                <p>V bode A je lokálne minimum!</p>
-              </div>
-
               <p class="slide-item">
                 Prichádzame pomaly k záveru. Stačí už len dosadzovať $x$-ové a $y$-ové hodnoty každého stacionárneho bodu do matice determinantu $
                 \begin{equation}
@@ -579,7 +450,7 @@
               </p>
 
               <p class="slide-item">
-                Ak výsledná hodnota determinantu pre počítaný stacionárny bod je <strong>väčšia ako 0</strong>, môžeme s určitosťou povedať, že má funkcia $f(x, y) v tomto bode <strong>lokálny extrém</strong>.
+                Ak výsledná hodnota determinantu pre počítaný stacionárny bod je <strong>väčšia ako 0</strong>, môžeme povedať, že má funkcia $f(x, y)$ v tomto bode <strong>lokálny extrém</strong>.
               </p>
 
               <p class="slide-item">
@@ -587,7 +458,7 @@
               </p>
 
               <p class="slide-item">
-                Začnime bodom $A = [4, 1]$. Súradnice $x$ a $y$ tohto bodu dosadíme do matice determinantu:
+                Začnime bodom $A = [4, 1]$. Súradnice $x$ a $y$ tohto bodu dosadíme do determinantu:
               </p>
 
               <p class="slide-item" style="text-align: center;">
@@ -610,33 +481,6 @@
             </div>
 
             <div class="step step-21">
-              <div class="extra top">
-                $$
-                \begin{equation}
-                D_A = \begin{bmatrix} 24 & 6 \\ 6 & 24 
-                \end{bmatrix} = 576 - 36 = 540 > 0
-                \end{equation}
-                $$
-                $$
-                \begin{equation}
-                D_B = \begin{bmatrix} -24 & -6 \\ -6 & -24 
-                \end{bmatrix} = 576 - 36 = 540 > 0
-                \end{equation}
-                $$
-                $$
-                \begin{equation}
-                D_C = \begin{bmatrix} 6 & 24 \\ 24 & 6 
-                \end{bmatrix} = 36 - 576 = -540 < 0
-                \end{equation}
-                $$
-                $$
-                \begin{equation}
-                D_D = \begin{bmatrix} -6 & -24 \\ -24 & -6 
-                \end{bmatrix} = 36 - 576 = -540 < 0
-                \end{equation}
-                $$
-              </div>
-
               <p class="slide-item">
                 Určíme jednotlivé determinanty pre príslušné stacionárne body:
               </p>
@@ -671,17 +515,6 @@
             </div>
 
             <div class="step step-22">
-              <div class="extra top">
-                $$D_A = 540 > 0$$
-                <p>V bode A existuje lokálny extrém, keďže $24 > 0$, ide o lokálne minimum.</p>
-                $$D_B = 540 > 0$$
-                <p>V bode B existuje lokálny extrém, keďže $-24 < 0$, ide o lokálne maximum.</p>
-                $$D_C = -540 < 0$$
-                <p>V bode C neexistujú extrémy funkcie $f(x, y)$.</p>
-                $$D_D = -540 < 0$$
-                <p>V bode D neexistujú extrémy funkcie $f(x, y)$.</p>
-              </div>
-
               <p class="slide-item" style="text-align: center;">
                 $$
                 \begin{equation}
@@ -714,12 +547,42 @@
               </p>
 
             </div>
+
+            <div class="step step-23">
+              <p class="slide-item">
+                <strong>Pomôžte nám vybudovať učebný materiál budúcnosti!</strong> Stačí, ak prispejete Vašim komentárom a vyjadríte v ňom Váš názor, čo by ste zlepšili, rovnako aj čo sa Vám páči alebo ako náš materiál pomohol.
+              </p>
+              <p class="slide-item">
+                
+              </p>
+            </div>
             
           </div>
           
         </div>
 
-        <div class="c"></div>
+        <div class="c">
+        	<div id="disqus_thread"></div>
+            <script>
+              /**
+              * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+              * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+              */
+              var disqus_config = function () {
+              this.page.url = "http://michaltakac.com/math-project/local-extrema-multiple-variables/"; // Replace PAGE_URL with your page's canonical URL variable
+              this.page.identifier = 001; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+              };
+              (function() { // DON'T EDIT BELOW THIS LINE
+              var d = document, s = d.createElement('script');
+
+              s.src = 'https://riesenepriklady.disqus.com/embed.js';
+
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+              })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </div>
 
       </article>
 
@@ -735,6 +598,7 @@
     tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
   });
   </script>
+  <script id="dsq-count-scr" src="https://riesenepriklady.disqus.com/count.js" async></script>
   <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
