@@ -287,7 +287,9 @@ scene // Zaciatok prvej sceny
     rangeY: [-5, 5],
     expr: function (emit, x, y, i, j) {
       var func = 3*Math.pow(x, 2) + 3*Math.pow(y, 2) - 51;
-      emit(x, func, y);
+      if (!isNaN(func)) {
+        emit(x, func, y);
+      }
     },
     channels: 3,
   }).surface({
@@ -309,15 +311,17 @@ scene // Zaciatok prvej sceny
     })
   // Ukazka prvej derivacie podla x v 2D
   .interval({
-    length: 5000,
+    length: 100,
     channels: 3,
     live: false,
     expr: function(emit, x, y, i, j){
       y = Math.sqrt(17-Math.pow(x, 2));
-      emit(x, 0, y);
+      if (!isNaN(y)) {
+        emit(x, 0, y);
+      }
     },
   }).line({
-    size: 8,
+    size: 15,
     color: 0x0074D9,
   })
     .step({
@@ -349,15 +353,17 @@ scene // Zaciatok prvej sceny
       }
     })
   .interval({
-    length: 5000,
+    length: 100,
     channels: 3,
     live: false,
     expr: function(emit, x, y, i, j){
       y = - Math.sqrt(17-Math.pow(x, 2));
-      emit(x, 0, y);
+      if (!isNaN(y)) {
+        emit(x, 0, y);
+      }
     },
   }).line({
-    size: 8,
+    size: 15,
     color: 0x0074D9,
   })
     .step({
@@ -423,16 +429,16 @@ scene // Zaciatok prvej sceny
     })
   // Ukazka prvej derivacie podla y v 2D
   .interval({
-    length: 5000,
+    length: 100,
     channels: 3,
     live: false,
     range: [-5, 5],
     expr: function(emit, x, y, i, j){
-      y = 4/x;
+      y = 4 / x;
       emit(x, 0, y);
     },
   }).line({
-    size: 20,
+    size: 8,
     color: 0x0074D9
   })
     .step({
